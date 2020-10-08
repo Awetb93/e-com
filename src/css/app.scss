@@ -1,0 +1,181 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.makeStyles-menuButton-2 {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding-right: 10px;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.hero1 {
+  width: 100vw;
+  height: 89vh;
+  background: url("../components/img/hero1.jpg") no-repeat center center / cover;
+  position: relative;
+}
+.hero-content {
+  width: 300px;
+  height: 70%;
+  background-color: rgba($color: #fff, $alpha: 0.7);
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 8;
+  h4 {
+    font-size: 12px;
+    font-style: italic;
+    color: rgba($color: #000, $alpha: 0.7);
+    margin-block-end: 0px;
+  }
+  h1 {
+    font-size: 25px;
+    color: rgba($color: #000, $alpha: 0.7);
+    margin-block-end: 0px;
+  }
+  h2 {
+    color: #bf811d;
+    margin-block-end: 0px;
+  }
+  p {
+    text-align: center;
+    margin-block-end: 0px;
+  }
+  .MuiButton-root {
+    margin-top: 10px;
+    color: #fff;
+    background-color: #bf811d;
+    &:hover {
+      background-color: #bf811d;
+      opacity: 0.7;
+    }
+  }
+}
+.hero-content::before {
+  content: "";
+  width: 95%;
+  height: 95%;
+  border: 2px solid #bf811d;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+}
+.toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  button {
+    margin: 5px;
+  }
+}
+.button1 {
+  background: #333;
+}
+.button2 {
+  background: rgb(255, 255, 255);
+}
+.hero2 {
+  width: 100vw;
+  height: 89vh;
+  background: url("../components/img/hero2.jpg") no-repeat center center / cover;
+  position: relative;
+}
+.section1 {
+  margin-top: 10px;
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+.section2 {
+  background: #98979f;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team {
+  background: url("../components/img/team.jpg") no-repeat 0% 100% / contain;
+  height: 100%;
+  width: 70%;
+}
+.team-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .MuiButton-root {
+    margin-top: 10px;
+    color: #fff;
+    background-color: #333;
+    &:hover {
+      background-color: #bf811d;
+      opacity: 0.7;
+    }
+  }
+}
+
+.section3-container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.secion3-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  cursor: pointer;
+}
+//shared main Style
+.main {
+  width: 100vw;
+  background: url("../components/img/background.png") no-repeat center
+    center/cover;
+}
+.chair-content {
+  display: flex;
+  background: url("../components/img/background.png") no-repeat center
+    center/cover;
+}
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: grey;
+    font-size: 18px;
+  }
+}
