@@ -43,12 +43,14 @@ const useStyles = makeStyles(theme => ({
 export default function Home(props) {
   const dispatch = useDispatch();
   const [id, setId] = useState(null);
-  const responseGoogle = response => {
-    dispatch(isSignedIn(response.profileObj));
-    setId(response.profileObj.googleId);
+  const responseGoogle =async response => {
+   await dispatch(isSignedIn(response.profileObj));
+   await setId(response.profileObj.googleId);
     console.log(true);
   };
-  const responseGoogleErorr = () => {};
+  const responseGoogleErorr = (res) => {
+    console.log(res)
+  };
   const responseGoogleOut = () => {
     dispatch(isSignedOut(id));
     setId(null);
