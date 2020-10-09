@@ -1,38 +1,38 @@
-import bedHero1 from "./img/hero3.png";
+import bedHero1 from "./img/hero3.webp";
 
-import bed1 from "./img/bed1.jpg";
-import bed2 from "./img/bed2.jpg";
-import bed3 from "./img/bed3.jpg";
-import bed4 from "./img/bed4.jpg";
-import bed5 from "./img/bed5.jpg";
+import bed1 from "./img/bed1.webp";
+import bed2 from "./img/bed2.webp";
+import bed3 from "./img/bed3.webp";
+import bed4 from "./img/bed4.webp";
+import bed5 from "./img/bed5.webp";
 
-import Chair1 from "./img/chair1.jpg";
-import Chair2 from "./img/chair2.jpg";
-import Chair3 from "./img/chair3.jpg";
-import Chair4 from "./img/chair4.jpg";
-import Chair5 from "./img/chair5.jpg";
-import Chair6 from "./img/chair6.jpeg";
+import Chair1 from "./img/chair1.webp";
+import Chair2 from "./img/chair2.webp";
+import Chair3 from "./img/chair3.webp";
+import Chair4 from "./img/chair4.webp";
+import Chair5 from "./img/chair5.webp";
+import Chair6 from "./img/chair6.webp";
 
-import sofa1 from "./img/sofa1.jpg";
-import sofa2 from "./img/sofa2.jpg";
-import sofa3 from "./img/sofa3.jpg";
-import sofa4 from "./img/sofa4.jpg";
-import sofa5 from "./img/sofa5.jpg";
-import sofa6 from "./img/sofa6.jpg";
+import sofa1 from "./img/sofa1.webp";
+import sofa2 from "./img/sofa2.webp";
+import sofa3 from "./img/sofa3.webp";
+import sofa4 from "./img/sofa4.webp";
+import sofa5 from "./img/sofa5.webp";
+import sofa6 from "./img/sofa6.webp";
 
-import table1 from "./img/tabel1.jpg";
-import table2 from "./img/tabel2.jpg";
-import table3 from "./img/tabel3.jpg";
-import table4 from "./img/tabel4.jpg";
-import table5 from "./img/tabel5.jpg";
-import table6 from "./img/tablehero.jpg";
+import table1 from "./img/tabel1.webp";
+import table2 from "./img/tabel2.webp";
+import table3 from "./img/tabel3.webp";
+import table4 from "./img/tabel4.webp";
+import table5 from "./img/tabel5.webp";
+import table6 from "./img/tablehero.webp";
 
-import light1 from "./img/lightbulb1.jpg";
-import light2 from "./img/lightbulb2.jpg";
-import light3 from "./img/lightbulb3.jpg";
-import light4 from "./img/lightbulb4.jpg";
-import light5 from "./img/lightbulb5.jpg";
-import light6 from "./img/lightbulb6.jpg";
+import light1 from "./img/lightbulb1.webp";
+import light2 from "./img/lightbulb2.webp";
+import light3 from "./img/lightbulb3.webp";
+import light4 from "./img/lightbulb4.webp";
+import light5 from "./img/lightbulb5.webp";
+import light6 from "./img/lightbulb6.webp";
 
 const desc =
   " ipsum dolor sit amet consectetur adipisicing elit. Ipsa nostrum dolorem incidunt ad obcaecati, veritatis quidem eaque explicabo quas, quaerat fuga molestias unde commodi sint ratione repellat nisi quia blanditiis.";

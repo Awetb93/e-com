@@ -1,7 +1,7 @@
 import React from "react";
 import Chairhero from "./subcomponents/subHero";
-import ChairHero2 from "./img/hero2.jpg";
-import Chair5 from "./img/chair5.jpg";
+import ChairHero2 from "./img/hero2.webp";
+import Chair5 from "./img/chair5.webp";
 import { sofa } from "./data";
 import Body from "./subcomponents/SubBody";
 import { Link } from "react-router-dom";

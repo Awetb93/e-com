@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import history from "../../history";
 import { Button } from "@material-ui/core";
-import bed from "../img/bedhero.jpg";
-import chair from "../img/hero7.jpg";
-import table from "../img/tablehero.jpg";
-import light from "../img/lighthero.jpg";
+import bed from "../img/bedhero.webp";
+import chair from "../img/hero7.webp";
+import table from "../img/tablehero.webp";
+import light from "../img/lighthero.webp";
 import art from "../img/carpenter.png";
 import sustain from "../img/sustainability.png";
 import service from "../img/service.png";

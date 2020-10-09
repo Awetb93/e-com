@@ -1,8 +1,8 @@
 import React from "react";
 import Chairhero from "./subcomponents/subHero";
 import { chairs } from "./data";
-import ChairHero2 from "./img/hero2.jpg";
-import Chair5 from "./img/chair5.jpg";
+import ChairHero2 from "./img/hero2.webp";
+import Chair5 from "./img/chair5.webp";
 import Body from "./subcomponents/SubBody";
 import { Link, useParams } from "react-router-dom";
 export default function Chairs() {
