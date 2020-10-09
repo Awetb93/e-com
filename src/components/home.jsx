@@ -49,6 +49,7 @@ export default function Home(props) {
    
   };
   const responseGoogleErorr = (res) => {
+    console.log(res)
     
   };
   const responseGoogleOut = () => {
