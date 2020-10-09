@@ -70,7 +70,6 @@ export default function Home(props) {
 
   const { signIn } = useGoogleLogin({
     clientId: process.env.REACT_APP_CLIENT_ID,
-
     onSuccess: responseGoogle,
     isSignedIn: true,
     onFailure: responseGoogleErorr,
