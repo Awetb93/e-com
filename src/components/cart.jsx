@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
 export default function Carts() {
   const { id } = useParams();
   const res = useSelector(state => state.user);
-  console.log(res);
+
   let indexx = 0;
   res.filter((el, index) => {
     if (el.id === id) {
@@ -105,7 +105,7 @@ export default function Carts() {
   if (arrayofPrice.length > 0) {
     tot = arrayofPrice.reduce((a, b) => a + b);
   }
-  console.log(tot);
+ 
 
   const apikey = process.env.REACT_APP_API_KEYS;
   const handeltoken = (token, address) => {

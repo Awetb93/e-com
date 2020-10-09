@@ -46,10 +46,10 @@ export default function Home(props) {
   const responseGoogle =async response => {
    await dispatch(isSignedIn(response.profileObj));
    await setId(response.profileObj.googleId);
-    console.log(true);
+   
   };
   const responseGoogleErorr = (res) => {
-    console.log(res)
+    
   };
   const responseGoogleOut = () => {
     dispatch(isSignedOut(id));

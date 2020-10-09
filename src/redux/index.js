@@ -36,7 +36,7 @@ const userSlice = createSlice({
     },
 
     addTocart: (state, { payload }) => {
-      console.log(payload);
+    
       state.user[payload.indexx].cart.push(payload.el);
     },
     addQuantity: (state, { payload }) => {
