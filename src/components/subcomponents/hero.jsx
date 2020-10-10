@@ -116,13 +116,13 @@ export default function Hero() {
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
           <div className="section3-items">
-            <img src={sustain} alt="art" />
+            <img src={sustain} alt="sustain" />
             <h4>sustainability</h4>
             <p>Lorem, ipsum dolor sit amet consectetur Repellat, earum!</p>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
           <div className="section3-items">
-            <img src={service} alt="art" />
+            <img src={service} alt="service" />
             <h4>Personal Service</h4>
             <p>Lorem, ipsum dolor sit amet Repellat, earum!</p>
             <p>Lorem ipsum dolor sit amet.</p>

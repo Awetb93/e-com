@@ -87,6 +87,7 @@ export default function Home() {
   const { signOut } = useGoogleLogout({
     
     //process.env.REACT_APP_LOCAL_CLIENT_ID
+    // process.env.REACT_APP_CLIENT_ID
     clientId:process.env.REACT_APP_CLIENT_ID,
 
     onLogoutSuccess: responseGoogleOut,
@@ -217,7 +218,7 @@ export default function Home() {
 
           <IconButton>
             {userCart.length > 0 ? (
-              <Modals index={indexx} />
+              <Modals index={indexx} userId={id}/>
             ) : (
               <ShoppingCartIcon />
             )}

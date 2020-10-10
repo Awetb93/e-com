@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Modals(props) {
+ 
   const numberofCartItems = useSelector(state => state.user[props.index].cart);
 
   const classes = useStyles();
@@ -67,7 +68,7 @@ export default function Modals(props) {
             >
               <Button
                 onClick={() => {
-                  history.push(`/cart/${props.index}`);
+                  history.push(`/cart/${props.userId}`);
                   setOpen(false);
                 }}
                 style={{ background: "#D1A65F", color: "white" }}
