@@ -5,7 +5,10 @@ import {
   IconButton,
   Toolbar,
   makeStyles,
+  useMediaQuery,
+  Menu,MenuItem
 } from "@material-ui/core";
+import { useTheme } from '@material-ui/core/styles';
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import history from "../history";
 import { Link } from "react-router-dom";
@@ -40,8 +43,11 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2, 4, 3),
   },
 }));
-export default function Home(props) {
+export default function Home() {
+   const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const dispatch = useDispatch();
+  const [anchorEl, setAnchorEl] = useState(null);
   const [id, setId] = useState(null);
   const responseGoogle =async response => {
    await dispatch(isSignedIn(response.profileObj));
@@ -70,26 +76,36 @@ export default function Home(props) {
   const classes = useStyles();
 
   const { signIn } = useGoogleLogin({
-    clientId: process.env.REACT_APP_CLIENT_ID,
+    //  process.env.REACT_APP_CLIENT_ID,
+   // process.env.REACT_APP_LOCAL_CLIENT_ID,
+    clientId:process.env.REACT_APP_CLIENT_ID,
     onSuccess: responseGoogle,
     isSignedIn: true,
     onFailure: responseGoogleErorr,
     cookiePolicy: "single_host_origin",
   });
   const { signOut } = useGoogleLogout({
-    clientId: process.env.REACT_APP_CLIENT_ID,
+    
+    //process.env.REACT_APP_LOCAL_CLIENT_ID
+    clientId:process.env.REACT_APP_CLIENT_ID,
 
     onLogoutSuccess: responseGoogleOut,
     isSignedIn: false,
     onFailure: responseGoogleErorr,
     cookiePolicy: "single_host_origin",
   });
+ const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <div>
       <AppBar position="static" color="default">
         <Toolbar>
-          <IconButton
+          {matches ===false?  <IconButton onClick={handleClick}
             edge="start"
             className={classes.menuButton}
             color="inherit"
@@ -97,6 +113,9 @@ export default function Home(props) {
           >
             <MenuIcon />
           </IconButton>
+            :null
+          }
+        
           <Typography
             variant="h6"
             className={classes.title}
@@ -104,49 +123,83 @@ export default function Home(props) {
           >
             YoFurni
           </Typography>
+        
 
           <div className="nav">
-            {id && (
-              <>
+            {matches === false ?
+            <>
+              { id && <Menu style={{top:"35px",left:"-16px"}}
+                id="simple-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}>
+                <MenuItem onClick={handleClose}>
+                  <Link className={classes.menuButton} color="inherit" to={`/beds/${id}`} > Beds </Link></MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link className={classes.menuButton} color="inherit" to={`/chairs/${id}`} >Chairs</Link></MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link className={classes.menuButton} color="inherit" to={`/tables/${id}`} >Tables</Link></MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <Link className={classes.menuButton} color="inherit" to={`/lightening/${id}`} >Lighting</Link></MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    {userCart.length > 0 ? (
                 <Link
                   className={classes.menuButton}
                   color="inherit"
-                  to={`/beds/${id}`}
+                  to={`/cart/${id}`}
                 >
-                  Beds
+                  Cart
                 </Link>
+              ) : null}
+                  </MenuItem>
+
+                </Menu>}
+              </> : <>
+          
+              {id && (
+                <>
+                  <Link
+                    className={classes.menuButton}
+                    color="inherit"
+                    to={`/beds/${id}`}
+                  >
+                    Beds
+                </Link>
+                  <Link
+                    className={classes.menuButton}
+                    color="inherit"
+                    to={`/chairs/${id}`}
+                  >
+                    Chairs
+                </Link>
+                  <Link
+                    className={classes.menuButton}
+                    color="inherit"
+                    to={`/tables/${id}`}
+                  >
+                    Tables
+                </Link>
+                  <Link
+                    className={classes.menuButton}
+                    color="inherit"
+                    to={`/lightening/${id}`}
+                  >
+                    lightening
+                </Link>
+                </>
+              )}
+              {userCart.length > 0 ? (
                 <Link
                   className={classes.menuButton}
                   color="inherit"
-                  to={`/chairs/${id}`}
+                  to={`/cart/${id}`}
                 >
-                  Chairs
+                  Cart
                 </Link>
-                <Link
-                  className={classes.menuButton}
-                  color="inherit"
-                  to={`/tables/${id}`}
-                >
-                  Tables
-                </Link>
-                <Link
-                  className={classes.menuButton}
-                  color="inherit"
-                  to={`/lightening/${id}`}
-                >
-                  lightening
-                </Link>
-              </>
-            )}
-            {userCart.length > 0 ? (
-              <Link
-                className={classes.menuButton}
-                color="inherit"
-                to={`/cart/${id}`}
-              >
-                Cart
-              </Link>
-            ) : null}
+              ) : null}
+            </>
+            }
           </div>
           {id ? (
             <IconButton
