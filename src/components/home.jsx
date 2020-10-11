@@ -50,7 +50,6 @@ export default function Home() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [id, setId] = useState(null);
   const responseGoogle = response => {
-  
       dispatch(isSignedIn(response.profileObj));
       setId(response.profileObj.googleId);
     
@@ -72,7 +71,7 @@ export default function Home() {
 
   };
   const res = useSelector(state => state.user);
-console.log(id)
+
   let indexx = 0;
   res.filter((el, index) => {
     if (el.id === id) {
