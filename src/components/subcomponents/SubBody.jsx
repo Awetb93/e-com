@@ -16,7 +16,7 @@ import { makeStyles } from "@material-ui/styles";
 
 import { useDispatch, useSelector } from "react-redux";
 import { addTocart } from "../../redux/index";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 const useStyles = makeStyles({
   root: {
     maxWidth: 300,
@@ -61,6 +61,9 @@ const SubBody = ({ img }) => {
                 <Typography variant="body2" color="textSecondary" component="p">
                   {el.desc}
                 </Typography>
+                 <Typography color="textSecondary"  variant="h5" component="h2">
+                  ${el.price},00
+                </Typography>
               </CardContent>
             </CardActionArea>
             {indexx === 0 ? (
@@ -76,10 +79,10 @@ const SubBody = ({ img }) => {
               <CardActions>
                 <IconButton onClick={() => dispatch(addTocart({ el, indexx }))}>
                   <AddShoppingCartIcon />
-                </IconButton>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
+                  </IconButton>
+                  <Button>
+                    <Link to={{ pathname: `/product/${index}/${id}`, state: el }} >Learn More</Link>
+                    </Button>
               </CardActions>
             )}
             </Card>

@@ -35,45 +35,46 @@ import light5 from "./img/lightbulb5.webp";
 import light6 from "./img/lightbulb6.webp";
 
 const desc =
-  " ipsum dolor sit amet consectetur adipisicing elit. Ipsa nostrum dolorem incidunt ad obcaecati, veritatis quidem eaque explicabo quas, quaerat fuga molestias unde commodi sint ratione repellat nisi quia blanditiis.";
+  " ipsum dolor sit amet consectetur adipisicing elit. Ipsa nostrum dolorem incidunt ad obcaecati";
+  const details=  " ipsum dolor sit amet consectetur adipisicing elit. Ipsa nostrum dolorem incidunt ad obcaecati, veritatis quidem eaque explicabo quas, quaerat fuga molestias unde commodi sint ratione repellat nisi quia blanditiis.elit. Ipsa nostrum dolorem incidunt ad obcaecati, veritatis quidem eaque explicabo quas, quaerat fuga molestias unde commodi sint";
 export const bedList = [
-  { image: bed1, price: 200, title: "Bed", desc, quantity: 1 },
-  { image: bed2, price: 300, title: "Bed", desc, quantity: 1 },
-  { image: bed3, price: 400, title: "Bed", desc, quantity: 1 },
-  { image: bed4, price: 500, title: "Bed", desc, quantity: 1 },
-  { image: bed5, price: 600, title: "Bed", desc, quantity: 1 },
-  { image: bedHero1, price: 700, title: "Bed", desc, quantity: 1 },
+  { image: bed1, price: 200, title: "Bed", desc, quantity: 1,details },
+  { image: bed2, price: 300, title: "Bed", desc, quantity: 1,details },
+  { image: bed3, price: 400, title: "Bed", desc, quantity: 1,details },
+  { image: bed4, price: 500, title: "Bed", desc, quantity: 1,details },
+  { image: bed5, price: 600, title: "Bed", desc, quantity: 1,details },
+  { image: bedHero1, price: 700, title: "Bed", desc, quantity: 1,details },
 ];
 export const chairs = [
-  { image: Chair1, price: 200, title: "Chair", desc, quantity: 1 },
-  { image: Chair2, price: 300, title: "Chair", desc, quantity: 1 },
-  { image: Chair3, price: 400, title: "Chair", desc, quantity: 1 },
-  { image: Chair4, price: 500, title: "Chair", desc, quantity: 1 },
-  { image: Chair5, price: 600, title: "Chair", desc, quantity: 1 },
-  { image: Chair6, price: 700, title: "Chair", desc, quantity: 1 },
+  { image: Chair1, price: 200, title: "Chair", desc, quantity: 1,details  },
+  { image: Chair2, price: 300, title: "Chair", desc, quantity: 1,details  },
+  { image: Chair3, price: 400, title: "Chair", desc, quantity: 1,details  },
+  { image: Chair4, price: 500, title: "Chair", desc, quantity: 1,details  },
+  { image: Chair5, price: 600, title: "Chair", desc, quantity: 1,details  },
+  { image: Chair6, price: 700, title: "Chair", desc, quantity: 1,details  },
 ];
 export const sofa = [
-  { image: sofa1, price: 200, title: "Sofa", desc, quantity: 1 },
-  { image: sofa2, price: 300, title: "Sofa", desc, quantity: 1 },
-  { image: sofa3, price: 400, title: "Sofa", desc, quantity: 1 },
-  { image: sofa4, price: 500, title: "Sofa", desc, quantity: 1 },
-  { image: sofa5, price: 600, title: "Sofa", desc, quantity: 1 },
-  { image: sofa6, price: 700, title: "Sofa", desc, quantity: 1 },
+  { image: sofa1, price: 200, title: "Sofa", desc, quantity: 1,details  },
+  { image: sofa2, price: 300, title: "Sofa", desc, quantity: 1,details  },
+  { image: sofa3, price: 400, title: "Sofa", desc, quantity: 1,details  },
+  { image: sofa4, price: 500, title: "Sofa", desc, quantity: 1,details  },
+  { image: sofa5, price: 600, title: "Sofa", desc, quantity: 1,details  },
+  { image: sofa6, price: 700, title: "Sofa", desc, quantity: 1,details  },
 ];
 export const table = [
-  { image: table1, price: 200, title: "Table", desc, quantity: 1 },
-  { image: table2, price: 300, title: "Table", desc, quantity: 1 },
-  { image: table3, price: 400, title: "Table", desc, quantity: 1 },
-  { image: table4, price: 500, title: "Table", desc, quantity: 1 },
-  { image: table5, price: 600, title: "Table", desc, quantity: 1 },
-  { image: table6, price: 700, title: "Table", desc, quantity: 1 },
+  { image: table1 , price: 200, title: "Table", desc, quantity: 1,details  },
+  { image: table2, price: 300, title: "Table", desc, quantity: 1,details  },
+  { image: table3, price: 400, title: "Table", desc, quantity: 1,details  },
+  { image: table4, price: 500, title: "Table", desc, quantity: 1,details  },
+  { image: table5, price: 600, title: "Table", desc, quantity: 1,details  },
+  { image: table6, price: 700, title: "Table", desc, quantity: 1,details  },
 ];
 
 export const light = [
-  { image: light1, price: 200, title: "Light", desc , quantity: 1 },
-  { image: light2, price: 300, title: "Light", desc , quantity: 1 },
-  { image: light3, price: 400, title: "Light", desc , quantity: 1 },
-{ image: light4, price: 500, title: "Light", desc, quantity: 1  },
-  { image: light5, price: 600, title: "Light", desc, quantity: 1  },
-  { image: light6, price: 700, title: "Light", desc, quantity: 1  },
+  { image: light1 , price: 200, title: "Light", desc , quantity: 1,details  },
+  { image: light2, price: 300, title: "Light", desc , quantity: 1,details  },
+  { image: light3, price: 400, title: "Light", desc , quantity: 1,details  },
+{ image: light4, price: 500, title: "Light", desc, quantity: 1,details   },
+  { image: light5, price: 600, title: "Light", desc, quantity: 1,details   },
+  { image: light6, price: 700, title: "Light", desc, quantity: 1,details   },
 ];

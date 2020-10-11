@@ -5,10 +5,10 @@ import Tables from "./components/Tables";
 import Hero from "./components/subcomponents/hero";
 import Sofa from "./components/sofa";
 import Cart from "./components/cart";
-
+import ProductDetails from "./components/productDetails"
 import { Route, Switch } from "react-router-dom";
-
 import React from "react";
+
 
 export default function header() {
   return (
@@ -22,7 +22,8 @@ export default function header() {
       <Route path="/tables/:id" component={Tables} exact />
       <Route path="/beds/:id" component={Beds} exact />
       <Route path="/cart/:id" component={Cart} exact />
-      {/* <Route path="/checkout" component={CheckOut} exact /> */}
+      <Route path="/product/:i/:id" component={ProductDetails} exact />
+   
     </Switch>
   );
 }
