@@ -9,6 +9,7 @@ import {
   CardActions,
   Grid,
   IconButton,
+
 } from "@material-ui/core";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { makeStyles } from "@material-ui/styles";
@@ -41,6 +42,7 @@ const SubBody = ({ img }) => {
 
   const list = img.map((el, index) => {
     return (
+  
       <Grid item md={4} xs={12} sm={6} key={index}>
         <div style={{ margin: "10px auto" }}>
           <Card className={classes.root}>
@@ -61,7 +63,6 @@ const SubBody = ({ img }) => {
                 </Typography>
               </CardContent>
             </CardActionArea>
-
             {indexx === 0 ? (
               <CardActions>
                 <IconButton disabled>
@@ -81,9 +82,11 @@ const SubBody = ({ img }) => {
                 </Button>
               </CardActions>
             )}
-          </Card>
+            </Card>
+           
         </div>
-      </Grid>
+        </Grid>
+       
     );
   });
   return (

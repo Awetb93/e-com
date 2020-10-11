@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import {
   AppBar,
   Typography,
@@ -44,26 +44,35 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 export default function Home() {
-   const theme = useTheme();
+  const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = useState(null);
   const [id, setId] = useState(null);
-  const responseGoogle =async response => {
-   await dispatch(isSignedIn(response.profileObj));
-   await setId(response.profileObj.googleId);
-   
+  const responseGoogle = response => {
+  
+      dispatch(isSignedIn(response.profileObj));
+      setId(response.profileObj.googleId);
+      console.log(response)
+    
+    
   };
+  useEffect(() => {
+    if (!id) {
+      history.push("/")
+    }
+  },[id])
   const responseGoogleErorr = (res) => {
     console.log(res)
     
   };
-  const responseGoogleOut = () => {
+  const responseGoogleOut = (res) => {
     dispatch(isSignedOut(id));
     setId(null);
+    console.log(res)
   };
   const res = useSelector(state => state.user);
-
+console.log(id)
   let indexx = 0;
   res.filter((el, index) => {
     if (el.id === id) {
@@ -91,7 +100,7 @@ export default function Home() {
     clientId:process.env.REACT_APP_CLIENT_ID,
 
     onLogoutSuccess: responseGoogleOut,
-    isSignedIn: false,
+    isSignedIn:false,
     onFailure: responseGoogleErorr,
     cookiePolicy: "single_host_origin",
   });
@@ -120,7 +129,15 @@ export default function Home() {
           <Typography
             variant="h6"
             className={classes.title}
-            onClick={() => history.push("/")}
+            onClick={() => {
+              if (id) {
+                   history.push(`/${id}`)
+              }
+              else {
+                   history.push("/")
+              }
+           
+            }}
           >
             YoFurni
           </Typography>

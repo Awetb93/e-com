@@ -17,6 +17,11 @@
     text-decoration: none;
   }
 }
+.MuiMenu-list {
+  a {
+    text-decoration: none;
+  }
+}
 .makeStyles-menuButton-2 {
   text-decoration: none;
   color: white;
@@ -44,6 +49,16 @@
   flex-direction: column;
   align-items: center;
   z-index: 8;
+  &::before {
+    content: "";
+    width: 95%;
+    height: 95%;
+    border: 2px solid #bf811d;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    z-index: -8;
+  }
   h4 {
     font-size: 12px;
     font-style: italic;
@@ -73,15 +88,7 @@
     }
   }
 }
-.hero-content::before {
-  content: "";
-  width: 95%;
-  height: 95%;
-  border: 2px solid #bf811d;
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-}
+
 .toggle {
   position: absolute;
   bottom: 20px;
