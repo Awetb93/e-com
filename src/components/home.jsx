@@ -53,7 +53,7 @@ export default function Home() {
   
       dispatch(isSignedIn(response.profileObj));
       setId(response.profileObj.googleId);
-      console.log(response)
+    
     
     
   };
@@ -69,7 +69,7 @@ export default function Home() {
   const responseGoogleOut = (res) => {
     dispatch(isSignedOut(id));
     setId(null);
-    console.log(res)
+
   };
   const res = useSelector(state => state.user);
 console.log(id)
