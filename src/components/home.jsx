@@ -85,7 +85,7 @@ export default function Home() {
   const { signIn } = useGoogleLogin({
     //  process.env.REACT_APP_CLIENT_ID,
    // process.env.REACT_APP_LOCAL_CLIENT_ID,
-    clientId:process.env.REACT_APP_LOCAL_CLIENT_ID,
+    clientId:process.env.REACT_APP_CLIENT_ID,
     onSuccess: responseGoogle,
     isSignedIn: true,
     onFailure: responseGoogleErorr,
@@ -95,7 +95,7 @@ export default function Home() {
     
     //process.env.REACT_APP_LOCAL_CLIENT_ID
     // process.env.REACT_APP_CLIENT_ID
-    clientId:process.env.REACT_APP_LOCAL_CLIENT_ID,
+    clientId:process.env.REACT_APP_CLIENT_ID,
 
     onLogoutSuccess: responseGoogleOut,
     isSignedIn:false,
