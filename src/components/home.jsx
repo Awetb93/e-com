@@ -65,13 +65,12 @@ export default function Home() {
     console.log(res)
     
   };
-  const responseGoogleOut = (res) => {
+  const responseGoogleOut = () => {
     dispatch(isSignedOut(id));
     setId(null);
 
   };
   const res = useSelector(state => state.user);
-
   let indexx = 0;
   res.filter((el, index) => {
     if (el.id === id) {
